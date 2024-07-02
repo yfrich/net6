@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "配置系统1": {
+      "commandName": "Project",
+      "commandLineArgs": " age=18 proxy:address=aaa proxy:port=80 proxy:ids:0=3 proxy:ids:1=5",
+      "environmentVariables": {
+        "C1_proxy:port": "80",
+        "C1_age": "19",
+        "C1_proxy:address": "aaa",
+        "C1_proxy:ids:0": "3",
+        "C1_proxy:ids:1": "5"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "1ConsoleAappMailSender": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "SmtpServer": "我是环境变量"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>MailServices</AssemblyName>
+    <RootNamespace>MailServices</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigServices\1ConfigServices.csproj" />
+    <ProjectReference Include="..\LogServices\1LogServices.csproj" />
+  </ItemGroup>
+
+</Project>
