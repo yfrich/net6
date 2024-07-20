@@ -36,7 +36,8 @@ namespace AwaitAsync4
                 case 1:
                     return File.ReadAllTextAsync(@"F:\于富\git管理代码\aspNetCore\Part2\demoFile\2.txt");
                 default:
-                    throw new ArgumentException();
+                    //throw new ArgumentException();
+                    return Task.FromResult("这就是异步方法定义");
             }
         }
         //方法内部会另起一个线程
@@ -50,7 +51,8 @@ namespace AwaitAsync4
                 case 1:
                     return await File.ReadAllTextAsync(@"F:\于富\git管理代码\aspNetCore\Part2\demoFile\2.txt");
                 default:
-                    throw new ArgumentException();
+                    //throw new ArgumentException();
+                    return "ss";
             }
         }
     }

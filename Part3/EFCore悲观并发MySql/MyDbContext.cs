@@ -14,8 +14,6 @@ namespace EFCore悲观并发MySql
         {
             base.OnConfiguring(optionsBuilder);
 
-            //SQLServer 
-
             optionsBuilder.UseMySql("server=localhost;user=root;password=Yf112233445!;database=EFCore",
                     new MySqlServerVersion(new Version(8, 0, 36)));
             //optionsBuilder.LogTo(Console.WriteLine);

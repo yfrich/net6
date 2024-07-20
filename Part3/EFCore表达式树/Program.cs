@@ -238,7 +238,8 @@ namespace EFCore表达式树
         static void MainTree(string[] args)
         {
             //注意编写EF数据过滤方式。 一定要加 Expression 否则会全表查询
-            /*
+
+            //Expression<Func<BookE, bool>> tt = t => { return GetPrice(t); };
             using (MyDbContext db = new MyDbContext())
             {
                 var t = db.BookEs.Where(GetPrice);
@@ -247,7 +248,7 @@ namespace EFCore表达式树
 
                 }
             }
-            */
+
 
             Expression<Func<BookE, bool>> e1 = t => t.Price > 5;
             Expression<Func<BookE, BookE, double>> e2 = (t1, t2) => t1.Price + t2.Price;

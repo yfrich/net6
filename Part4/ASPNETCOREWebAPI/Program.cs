@@ -92,7 +92,7 @@ builder.Services.AddLogging(logBuilder =>
     //Serilog注入等
 });
 
-/*
+
 //**********注入DBContext 是Scoped
 builder.Services.AddDbContext<BookDbContext>(opt =>
 {
@@ -104,7 +104,7 @@ builder.Services.AddDbContext<PersonDbContext>(opt =>
     string connStr = builder.Configuration.GetSection("ConnStrEF").Value;
     opt.UseSqlServer(connStr);
 });
-*/
+
 
 //**********跨区CORS策略
 string[] urls = new[] { "http://localhost:5173" };
@@ -149,7 +149,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-//**********启用CORS策略
+//**********启用CORS策略要添加在UseHttpsRedirection
 app.UseCors();
 //**********启用服务器端响应缓存 注册要在UseCors后 MapControllers前
 app.UseResponseCaching();

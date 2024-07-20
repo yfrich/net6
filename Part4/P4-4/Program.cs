@@ -42,6 +42,7 @@ Person p2 = p1;
 Console.WriteLine(Object.ReferenceEquals(p1, p2));
 Person p3 = new(p1.Id, p1.Name, p1.Age);
 Console.WriteLine(Object.ReferenceEquals(p1, p3));
+Console.WriteLine(p3 == p1);
 Person p4 = p1 with { };//创建副本，不是同一个对象 但是内容完全一样。
 Console.WriteLine(p4.ToString());
 Console.WriteLine(p4 == p1);

@@ -15,13 +15,20 @@ namespace 委托复习
 
             //无返回值
             Action a = F1;
+            //带参数
+            Action<string, string> a1 = A1;
             a();
+            a1("a", "b");
             //有返回值 int
             Func<int, int, int> f = Add;
             Console.WriteLine(f(5, 6));
             //有返回值 string
             Func<int, int, string> f2 = F33;
             Console.WriteLine(f2(5, 6));
+        }
+        static void A1(string str, string str2)
+        {
+            Console.WriteLine($"{str},{str2}");
         }
         static void F1()
         {

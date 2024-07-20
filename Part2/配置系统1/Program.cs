@@ -46,7 +46,7 @@ namespace 配置系统1
             configurationBuilder.AddDbConfiguration(() => new SqlConnection(connStr), reloadOnChange: true, reloadInterval: TimeSpan.FromSeconds(2));
             */
 
-            
+
 
 
             IConfigurationRoot configRoot = configurationBuilder.Build();
@@ -69,9 +69,9 @@ namespace 配置系统1
 
             services.AddOptions()
                 .Configure<Config>(t => configRoot.Bind(t));
-                //.Configure<Proxy>(t => configRoot.GetSection("proxy").Bind(t));
+            //.Configure<Proxy>(t => configRoot.GetSection("proxy").Bind(t));
 
-
+            
             using (var sp = services.BuildServiceProvider())
             {
                 while (true)
